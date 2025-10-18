@@ -30,10 +30,6 @@ def translate_mymemory(q, src, tgt):
     data = r.json()
     return data.get("responseData", {}).get("translatedText", "")
 
-@app.route("/health", methods=["GET"])
-def health():
-    return "ok", 200
-
 @app.route("/callback", methods=["POST"])
 def callback():
     signature = request.headers.get("X-Line-Signature", "")
