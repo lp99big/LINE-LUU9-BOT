@@ -12,12 +12,8 @@ def home():
 
 @app.route('/health', methods=['GET'])
 def health():
-    return "ok", 200
-
-@app.route("/callback", methods=["GET"])
-def callback_test():
-    return "Webhook working!", 200
-
+    return 'ok', 200
+    
 CHANNEL_ACCESS_TOKEN = os.getenv("LINE_CHANNEL_ACCESS_TOKEN")
 CHANNEL_SECRET = os.getenv("LINE_CHANNEL_SECRET")
 
